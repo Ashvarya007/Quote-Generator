@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="icon" type="image/png" href="quote.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="display-3">Welcome to the Quote Generator website</h1>
+    <p>
+      This site shows you a variety of quotes and dialogues from movies and tv
+      series. Click on the "New Quote" button to generate a new quote everytime!
+    </p>
+    <div class="quote-container">
+      <div class="quote-source">
+        <span class="badge text-bg-warning" id="show"></span>
+      </div>
+      <div class="quote-text">
+        <i class="fas fa-quote-left"></i>
+        <span id="quote"></span>
+      </div>
+      <!-- author element  -->
+      <div class="quote-author">
+        <span id="author"></span>
+      </div>
+      <!-- buttons for share and new quote generation -->
+      <div class="button-container">
+        <button
+          class="btn btn-outline-dark twitter-button"
+          id="twitter"
+          title="Tweet this!"
+        >
+          <i class="fab fa-twitter"></i>
+        </button>
+
+        <i class="bi-heart text-center" id="favIcon"></i>
+
+        <button class="btn btn-outline-dark" id="new-quote">New Quote</button>
+      </div>
+    </div>
+    <div>
+      <div class="alert alert-info d-none" role="alert" id="alertBox">
+        Click on the heart button to remove the favourite quote
+      </div>
+      <ul class="list-group" id="listContainer"></ul>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Script -->
+    <script src="movies.js"></script>
+    <script src="quotes.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
