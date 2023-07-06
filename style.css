@@ -15,12 +15,12 @@ body {
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
   font-weight: 700;
-  /* display: flex;
-  align-items: center;
+  /* /* display: flex;
+  align-items: center; */
   justify-content: center;
   align-content: space-around;
   flex-wrap: wrap;
-  flex-direction: row; */
+  flex-direction: row;
 }
 
 #mainContainer {
@@ -69,23 +69,18 @@ body {
 button {
   cursor: pointer;
   font-size: 1.2rem;
-  height: 2.5rem;
+  /* height: 2.5rem; */
   border: none;
-  border-radius: 10px;
-  color: white;
+  border-radius: 50px;
+  /* color: white;
   background-color: #333;
   outline: none;
   padding: 0.5rem 1.8rem;
-  box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65);
+  box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65); */
 }
 
 button:hover {
   filter: brightness(120%);
-}
-
-button:active {
-  transform: translate(0 o.3rem);
-  box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
 }
 
 .twitter-button:hover {
@@ -98,12 +93,12 @@ button:active {
 
 #favIcon {
   cursor: pointer;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 #dark-mode {
   cursor: pointer;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 #favIcon:hover {
@@ -152,5 +147,22 @@ button:active {
   }
   .quote-text {
     font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .quote-container {
+    margin: auto 25px;
+  }
+  .quote-text {
+    font-size: 1.5rem;
+  }
+  .author-text {
+    font-size: 1rem;
+  }
+  #mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
