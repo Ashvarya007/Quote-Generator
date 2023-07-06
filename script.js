@@ -1,4 +1,4 @@
-const quoteContainer = document.getElementById("quote-container");
+const quoteContainer = document.getElementsByClassName("quote-container");
 const quoteText = document.getElementById("quote");
 const authorText = document.getElementById("author");
 const twitterBtn = document.getElementById("twitter");
@@ -9,6 +9,7 @@ const favBtn = document.getElementById("favIcon");
 const favList = document.getElementById("favouriteList");
 const listHolder = document.getElementById("listContainer");
 const alert = document.getElementById("alertBox");
+const darkModeBtn = document.getElementById("dark-mode");
 // let apiQuotes = [];
 
 
@@ -27,11 +28,6 @@ function newQuoteGeneration() {
         quoteText.classList.add('long-quote');
     } else {
         quoteText.classList.remove('long-quote');
-    }
-    if (movieQuote.type === "movie") {
-        const tv = quoteContainer.createElement("i");
-        tv.classList.add("bi-tv");
-
     }
     quoteText.textContent = movieQuote.quote;
     showName.textContent = movieQuote.show; 
@@ -60,27 +56,21 @@ function favourites() {
     newList.classList.add("bg-success-subtle");
 }
 
+// dark mode for the quotes
+function setDarkMode() {
+    document.body.classList.toggle("dark-mode-bg");
+    document.getElementById("title").classList.toggle("dark-mode-text");
+    document.getElementById("titleText").classList.toggle("dark-mode-text");
+    document.getElementsByClassName("list-group-item").classList.toggle("bg-dark-subtle");
+}
+
 // Event listener
 newQuoteBtn.addEventListener('click', newQuoteGeneration);
 twitterBtn.addEventListener('click', tweetQuote);
 favBtn.addEventListener('click', favourites);
+darkModeBtn.addEventListener('click', setDarkMode)
 
 
-
-
-// get quotes from api
-// async function getQuotes() {
-//     const apiUrl = 'https://type.fit/api/quotes';
-//     try {
-//         const response = await fetch(apiUrl);
-//         apiQuotes = await response.json();
-//         newQuoteGeneration();
-//     } catch (error) {
-//         console.log(error);
-//         alert(error);
-//         // catch errors and handle here
-//     }
-// }
 
 // on page load
 newQuoteGeneration();

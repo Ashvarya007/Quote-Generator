@@ -28,43 +28,46 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 class="display-3">Welcome to the Quote Generator website</h1>
-    <p>
+    <h1 class="display-3" id="title">Welcome to the Quote Generator website</h1>
+    <p id="titleText">
       This site shows you a variety of quotes and dialogues from movies and tv
       series. Click on the "New Quote" button to generate a new quote everytime!
     </p>
-    <div class="quote-container">
-      <div class="quote-source">
-        <span class="badge text-bg-warning" id="show"></span>
-      </div>
-      <div class="quote-text">
-        <i class="fas fa-quote-left"></i>
-        <span id="quote"></span>
-      </div>
-      <!-- author element  -->
-      <div class="quote-author">
-        <span id="author"></span>
-      </div>
-      <!-- buttons for share and new quote generation -->
-      <div class="button-container">
-        <button
-          class="btn btn-outline-dark twitter-button"
-          id="twitter"
-          title="Tweet this!"
-        >
-          <i class="fab fa-twitter"></i>
-        </button>
 
-        <i class="bi-heart text-center" id="favIcon"></i>
+    <div class="container" id="mainContainer">
+      <div class="quote-container">
+        <div class="quote-source">
+          <span class="badge text-bg-warning" id="show"></span>
+        </div>
+        <div class="quote-text">
+          <i class="fas fa-quote-left"></i>
+          <span id="quote"></span>
+        </div>
+        <!-- author element  -->
+        <div class="quote-author">
+          <span id="author"></span>
+        </div>
+        <!-- buttons for share and new quote generation -->
+        <div class="button-container">
+          <button
+            class="btn btn-outline-dark twitter-button"
+            id="twitter"
+            title="Tweet this!"
+          >
+            <i class="fab fa-twitter"></i>
+          </button>
 
-        <button class="btn btn-outline-dark" id="new-quote">New Quote</button>
+          <i class="bi-heart text-center" id="favIcon"></i>
+          <button class="btn btn-outline-dark" id="new-quote">New Quote</button>
+          <i class="bi-moon-stars" id="dark-mode"></i>
+        </div>
       </div>
-    </div>
-    <div>
-      <div class="alert alert-info d-none" role="alert" id="alertBox">
-        Click on the heart button to remove the favourite quote
+      <div>
+        <div class="alert alert-info d-none" role="alert" id="alertBox">
+          Click on the heart button to remove the favourite quote
+        </div>
+        <ul class="list-group" id="listContainer"></ul>
       </div>
-      <ul class="list-group" id="listContainer"></ul>
     </div>
 
     <script
